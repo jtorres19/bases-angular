@@ -1,0 +1,39 @@
+<h1>Heroes</h1>
+
+<table class="table table-hover">
+  <thead>
+  <tr>
+    <th>Nombre</th>
+    <th>Edad</th>
+    <th>Método</th>
+    <th>Capitalizado</th>
+    <th></th>
+    <th></th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td>{{name}}</td>
+    <td>{{age}}</td>
+    <td>{{getHeroDescription()}}</td>
+    <td>{{capitalizedName}}</td>
+    <td>
+      <button
+        *ngIf="name !== 'Thor'"
+        (click)="changeHero()"
+        class="btn btn-primary me-2">
+        Cambiar Nombre
+      </button>
+    </td>
+    <td>
+      <button
+        *ngIf="age !== 1500"
+        (click)="changeAge()"
+        class="btn btn-primary">
+        Cambiar Edad
+      </button>
+    </td>
+  </tr>
+  </tbody>
+</table>
+
