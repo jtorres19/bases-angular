@@ -1,9 +1,6 @@
 <h3>Listado de Héroes</h3>
 
-<button
-  *ngIf="heroNames.length > 0"
-  (click)="removeLastHero()"
-  class="btn btn-outline-danger my-2">
+<button *ngIf="heroNames.length > 0" (click)="removeLastHero()" class="btn btn-outline-danger my-2">
   Eliminar último héroe
 </button>
 

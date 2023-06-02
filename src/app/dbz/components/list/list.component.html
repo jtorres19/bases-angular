@@ -1,0 +1,24 @@
+<h4>Listado</h4>
+<table class="table align-middle">
+  <thead>
+  <tr>
+    <th scope="col">#</th>
+    <th class="text-center" scope="col">Nombre</th>
+    <th class="text-center" scope="col">Poder</th>
+    <th class="text-center" scope="col"></th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let character of characterList; let i = index; let isFirst=first; let isLast=last;"
+      [ngClass]="{'table-success': isFirst, 'table-secondary': isLast,}">
+    <th scope="row">{{i + 1}}</th>
+    <td class="text-center">{{character.name}}</td>
+    <td class="text-center">{{character.power}}</td>
+    <td class="text-center">
+      <button (click)="onDeleteCharacter(character.id)" class="btn btn-outline-danger">
+        <i class="bi bi-trash3-fill"></i>
+      </button>
+    </td>
+  </tr>
+  </tbody>
+</table>

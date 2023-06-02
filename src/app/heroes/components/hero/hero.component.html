@@ -18,18 +18,12 @@
     <td>{{getHeroDescription()}}</td>
     <td>{{capitalizedName}}</td>
     <td>
-      <button
-        *ngIf="name !== 'Thor'"
-        (click)="changeHero()"
-        class="btn btn-primary me-2">
+      <button *ngIf="name !== 'Thor'" (click)="changeHero()" class="btn btn-primary me-2">
         Cambiar Nombre
       </button>
     </td>
     <td>
-      <button
-        *ngIf="age !== 1500"
-        (click)="changeAge()"
-        class="btn btn-primary">
+      <button *ngIf="age !== 1500" (click)="changeAge()" class="btn btn-primary">
         Cambiar Edad
       </button>
     </td>
